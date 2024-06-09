@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navgraph"
+    app:startDestination="@id/orderingmenufragment2">
+
+    <fragment
+        android:id="@+id/orderingmenufragment2"
+        android:name="com.example.xmlapp.presentation.fragment.orderingmenufragment"
+        android:label="orderingmenufragment" >
+        <action
+            android:id="@+id/action_orderingmenufragment2_to_recpiedetail"
+            app:destination="@id/recpiedetail" />
+    </fragment>
+    <fragment
+        android:id="@+id/signupfragment"
+        android:name="com.example.xmlapp.presentation.fragment.signupfragment"
+        android:label="signupfragment" >
+        <action
+            android:id="@+id/action_signupfragment_to_orderingmenufragment2"
+            app:destination="@id/orderingmenufragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/recpiedetail"
+        android:name="com.example.xmlapp.presentation.fragment.recpiedetail"
+        android:label="recpiedetail" >
+    <argument
+        android:name="recipeId"
+        app:argType="integer">
+
+    </argument>
+    </fragment>
+</navigation>
